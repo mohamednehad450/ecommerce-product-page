@@ -69,7 +69,7 @@ const ImageDisplay: FC<{ images: { thumbnail: string, image: string }[] }> = ({ 
             <div className='hidden m-4 md:flex flex-row w-[28rem] overflow-x-scroll'>
                 <span className="flex flex-row">
                     {images.map((image, i) => (
-                        <Thumbnail active={i === active} src={image.thumbnail} onClick={() => setActive(i)} />
+                        <Thumbnail key={i} active={i === active} src={image.thumbnail} onClick={() => setActive(i)} />
                     ))}
                 </span>
             </div>

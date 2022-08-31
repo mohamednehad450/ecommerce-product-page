@@ -62,7 +62,7 @@ const ImageOverlay: FC<{
             <div className='m-8 mx-16 flex flex-row w-[28rem] overflow-x-scroll'>
                 <span className="flex flex-row">
                     {images.map((image, i) => (
-                        <Thumbnail active={i === active} src={image.thumbnail} onClick={() => setActive(i)} />
+                        <Thumbnail key={i} active={i === active} src={image.thumbnail} onClick={() => setActive(i)} />
                     ))}
                 </span>
             </div>

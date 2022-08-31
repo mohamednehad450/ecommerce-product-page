@@ -21,7 +21,7 @@ const CartOverlay: FC<{ onClose: () => void }> = ({ onClose }) => {
             {cart?.list.length ? (
                 <>
                     {cart.list.map(({ product, quantity }) => (
-                        <span className="flex flex-row flex-nowrap ">
+                        <span key={product.id} className="flex flex-row flex-nowrap ">
                             <span className="m-4 w-[50px] h-[50px] rounded-md overflow-hidden">
                                 <Image src={product.images[0].thumbnail} width={50} height={50} />
                             </span>
