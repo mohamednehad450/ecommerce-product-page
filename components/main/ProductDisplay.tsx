@@ -20,7 +20,7 @@ const ProductDisplay: FC<ProductProps> = ({ product }) => {
 
     return (
         <>
-            <div className='m-16  flex flex-col flex-1 items-end'>
+            <div className='md:m-16  flex flex-col flex-1 items-end'>
                 <ImageDisplay images={images} />
             </div>
             <div className='m-16 mt-32 flex flex-col flex-1 items-start'>

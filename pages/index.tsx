@@ -77,7 +77,7 @@ const Home: NextPage = () => {
             <NavLink title="About" href="#" />
             <NavLink title="Contact" href="#" />
           </Navbar>
-          <section className='mt-6 flex'>
+          <section className='md:mt-6 flex flex-col md:flex-row'>
             <ProductDisplay product={product} />
           </section>
         </main>
