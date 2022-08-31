@@ -15,20 +15,20 @@ const product: Product = {
   description: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
   images: [
     {
-      thumbnail: "/images/image-product-1-thumbnail.jpg",
-      image: "/images/image-product-1.jpg",
+      thumbnail: "images/image-product-1-thumbnail.jpg",
+      image: "images/image-product-1.jpg",
     },
     {
-      thumbnail: "/images/image-product-2-thumbnail.jpg",
-      image: "/images/image-product-2.jpg",
+      thumbnail: "images/image-product-2-thumbnail.jpg",
+      image: "images/image-product-2.jpg",
     },
     {
-      thumbnail: "/images/image-product-3-thumbnail.jpg",
-      image: "/images/image-product-3.jpg",
+      thumbnail: "images/image-product-3-thumbnail.jpg",
+      image: "images/image-product-3.jpg",
     },
     {
-      thumbnail: "/images/image-product-4-thumbnail.jpg",
-      image: "/images/image-product-4.jpg",
+      thumbnail: "images/image-product-4-thumbnail.jpg",
+      image: "images/image-product-4.jpg",
     }
   ],
   price: 250,
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
       <ProvideCart>
         <main className='w-screen max-w-screen-xl flex flex-col items-stretch m-auto'>
           <Navbar
-            logo={<Image src="/images/logo.svg" alt="Logo" width={138} height={20} />}
+            logo={<Image src="images/logo.svg" alt="Logo" width={138} height={20} />}
             actions={(
               <>
                 <CartButton onClick={() => setOpenCart(v => !v)} />
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
                 >
                   <CartOverlay onClose={() => setOpenCart(() => false)} />
                 </span>
-                <Avatar src='/images/image-avatar.png' />
+                <Avatar src='images/image-avatar.png' />
               </>
             )}
           >
