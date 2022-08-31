@@ -6,7 +6,7 @@ import { IconClose, IconMenu } from "../icons";
 
 const Navbar: FC<PropsWithChildren<{ logo: ReactNode, actions: ReactNode }>> = ({ children, logo, actions }) => {
 
-    const [opened, setOpened] = useState(true)
+    const [opened, setOpened] = useState(false)
 
     return (
         <nav className="w-100% md:h-28 h-[4.5rem] flex flex-row items-center border-b-2">
