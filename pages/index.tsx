@@ -2,9 +2,38 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
-import { ProvideCart } from '../components/context'
-import { CartButton, CartOverlay } from '../components/main'
+import { Product, ProvideCart } from '../components/context'
+import { CartButton, CartOverlay, ProductDisplay } from '../components/main'
 import { Navbar, NavLink, Avatar } from '../components/nav'
+
+
+
+const product: Product = {
+  id: 1,
+  brand: "SNEAKER COMPANY",
+  name: "Fall Limited Edition Sneakers",
+  description: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
+  images: [
+    {
+      thumbnail: "/images/image-product-1-thumbnail.jpg",
+      image: "/images/image-product-1.jpg",
+    },
+    {
+      thumbnail: "/images/image-product-2-thumbnail.jpg",
+      image: "/images/image-product-2.jpg",
+    },
+    {
+      thumbnail: "/images/image-product-3-thumbnail.jpg",
+      image: "/images/image-product-3.jpg",
+    },
+    {
+      thumbnail: "/images/image-product-4-thumbnail.jpg",
+      image: "/images/image-product-4.jpg",
+    }
+  ],
+  price: 250,
+  discount: 0.5
+}
 
 
 
@@ -48,6 +77,9 @@ const Home: NextPage = () => {
             <NavLink title="About" href="#" />
             <NavLink title="Contact" href="#" />
           </Navbar>
+          <section className='mt-6 flex'>
+            <ProductDisplay product={product} />
+          </section>
         </main>
       </ProvideCart>
       <footer>
