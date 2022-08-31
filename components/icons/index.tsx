@@ -26,11 +26,11 @@ const IconClose: FC<IconProps> = ({ width, height }) => (
 )
 
 const IconNext: FC<IconProps> = ({ width, height }) => (
-    <svg width={width || "13"} height={height || "18"} viewBox="0 0 13 18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="inherit" stroke-width="3" fill="none" fill-rule="evenodd" /></svg>
+    <svg width={width || "13"} height={height || "18"} viewBox="0 0 13 18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="inherit" strokeWidth="3" fill="none" fill-rule="evenodd" /></svg>
 )
 
 const IconPrevious: FC<IconProps> = ({ width, height }) => (
-    <svg width={width || "13"} height={height || "18"} viewBox="0 0 13 18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="inherit" stroke-width="3" fill="none" fill-rule="evenodd" /></svg>
+    <svg width={width || "13"} height={height || "18"} viewBox="0 0 13 18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="inherit" strokeWidth="3" fill="none" fill-rule="evenodd" /></svg>
 )
 
 const IconDelete: FC<IconProps> = ({ width, height }) => (
