@@ -39,32 +39,32 @@ const ImageDisplay: FC<{ images: { thumbnail: string, image: string }[] }> = ({ 
         <>
             <button onClick={() => setOpened(true)} className='md:m-4 flex overflow-hidden md:rounded-2xl w-screen md:w-max cursor-default md:cursor-pointer'>
                 <Image src={images[active].image} alt="product image" width={dim.width} height={dim.height} />
-                <button
-                    onClick={() => setActive(next)}
-                    style={{
-                        transform: `translate(0, calc(${dim.height / 2}px - 50%))`
-                    }}
-                    className={`
-                        absolute right-4 md:hidden
+            </button>
+            <button
+                onClick={() => setActive(next)}
+                style={{
+                    transform: `translate(0, calc(${dim.height / 2}px - 50%))`
+                }}
+                className={`
+                        absolute right-4 md:hidden 
                         w-14 h-14 grid place-content-center rounded-full
                         hover:stroke-primary-color-1  stroke-dark-blue bg-light-grayish-blue
                     `}
-                >
-                    <IconNext width={36} />
-                </button>
-                <button
-                    style={{
-                        transform: `translate(0, calc(${dim.height / 2}px - 50%))`
-                    }}
-                    onClick={() => setActive(previous)}
-                    className={`
+            >
+                <IconNext width={36} />
+            </button>
+            <button
+                style={{
+                    transform: `translate(0, calc(${dim.height / 2}px - 50%))`
+                }}
+                onClick={() => setActive(previous)}
+                className={`
                         absolute left-4 md:hidden
                         rounded-full w-14 h-14 grid place-content-center
                         hover:stroke-primary-color-1 stroke-dark-blue bg-light-grayish-blue
                     `}
-                >
-                    <IconPrevious width={36} />
-                </button>
+            >
+                <IconPrevious width={36} />
             </button>
             <div className='hidden m-4 md:flex flex-row w-[28rem] overflow-x-scroll'>
                 <span className="flex flex-row">
