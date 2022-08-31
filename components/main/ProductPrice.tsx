@@ -9,7 +9,7 @@ interface ProductPriceProps {
 const ProductPrice: FC<ProductPriceProps> = ({ discount, price }) => {
 
     return (
-        <>
+        <span className="flex flex-row md:flex-col  w-full justify-between items-center md:items-start">
             <span className='mt-4 flex flex-row'>
                 <p className='text-3xl font-bold' >
                     ${toDecimal(discount ? price * (1 - discount) : price, 2)}
@@ -23,7 +23,7 @@ const ProductPrice: FC<ProductPriceProps> = ({ discount, price }) => {
             {discount && (
                 <p className='text-dark-grayish-blue line-through mt-2' >${toDecimal(price, 2)}</p>
             )}
-        </>
+        </span>
     )
 }
 
