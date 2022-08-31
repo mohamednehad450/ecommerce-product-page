@@ -47,7 +47,7 @@ const CartOverlay: FC<{ onClose: () => void }> = ({ onClose }) => {
                     </button>
                 </>
             ) : (
-                <span className='flex-grow grid items-center h-full'>
+                <span className='m-auto grid items-center'>
                     <p className='m-auto'>
                         Your Cart is Empty
                     </p>
