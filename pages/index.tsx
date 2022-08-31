@@ -60,7 +60,7 @@ const Home: NextPage = () => {
                 <span
                   className={`
                     ${openCart ? 'block' : 'hidden'}
-                    absolute right-4  translate-y-14
+                    absolute right-4 md:left-auto left-4 translate-y-14
                     2xl:translate-x-[-50%]  2xl:right-auto
                     shadow-xl rounded-md z-10 m-2 bg-white
                   `}
