@@ -14,7 +14,7 @@ const CartOverlay: FC<{ onClose: () => void }> = ({ onClose }) => {
     const cart = useCart()
 
     return (
-        <span ref={ref} className="flex flex-col min-h-[16rem] min-w-[22rem]">
+        <span ref={ref} className="flex flex-col min-h-[16rem] md:min-w-[22rem]">
             <p className='font-black text-lg p-6 text-left border-b'>
                 Cart
             </p>
@@ -37,9 +37,8 @@ const CartOverlay: FC<{ onClose: () => void }> = ({ onClose }) => {
                                         ${toDecimal(product.price * (1 - (product.discount || 0)) * quantity, 2)}
                                     </span>
                                 </span>
-
                             </span>
-                            <button onClick={(e) => { cart.remove(product.id); e.preventDefault() }}>
+                            <button className="ml-auto m-4" onClick={(e) => { cart.remove(product.id); e.preventDefault() }}>
                                 <IconDelete />
                             </button>
                         </span>))}
