@@ -9,14 +9,13 @@ const Navbar: FC<PropsWithChildren<{ logo: ReactNode, actions: ReactNode }>> = (
     const [opened, setOpened] = useState(false)
 
     return (
-        <nav className="w-100% md:h-28 h-[4.5rem] flex flex-row items-center border-b-2">
-
+        <nav className="w-100% md:h-28 h-16 flex flex-row items-center border-b-2 top-0 sticky z-10 bg-white">
             <ReactModal
                 isOpen={opened}
                 onRequestClose={() => setOpened(false)}
                 shouldCloseOnEsc
                 shouldCloseOnOverlayClick
-                overlayClassName={"md:hidden absolute top-0 left-0 w-screen h-screen"}
+                overlayClassName={"md:hidden fixed top-0 left-0 w-screen h-screen z-20"}
                 style={{
                     overlay: {
                         background: "rgba(0,0,0,75%)",

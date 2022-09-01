@@ -20,10 +20,10 @@ const ProductDisplay: FC<ProductProps> = ({ product }) => {
 
     return (
         <>
-            <div className='md:m-16  flex flex-col flex-1 items-end'>
+            <div className='md:my-16 lg:m-16 flex flex-col flex-1 items-end'>
                 <ImageDisplay images={images} />
             </div>
-            <div className='md:m-16 md:mt-32 m-8 flex flex-col flex-1 items-start'>
+            <div className='md:my-16 lg:m-16 md:mt-32 m-6 flex flex-col flex-1 items-start'>
                 <ProductBrand title={brand} />
                 <ProductTitle title={name} />
                 <ProductDescription description={description} />
@@ -32,7 +32,7 @@ const ProductDisplay: FC<ProductProps> = ({ product }) => {
                     <Counter value={count} onChange={setCount} />
                     <button
                         onClick={() => { cart?.addToCart(product, count); setCount(0) }}
-                        className='bg-primary-color-1 hover:opacity-70 w-full md:w-[17rem] h-14 m-2 font-bold rounded-md text-light-grayish-blue flex flex-row items-center justify-center'
+                        className='bg-primary-color-1 hover:opacity-70 md:w-[17rem] h-14 my-2 md:m-4 font-bold rounded-md text-light-grayish-blue flex flex-row items-center justify-center'
                     >
                         <span className='px-4 fill-light-grayish-blue'>
                             <IconCart />

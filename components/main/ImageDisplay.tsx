@@ -47,11 +47,11 @@ const ImageDisplay: FC<{ images: { thumbnail: string, image: string }[] }> = ({ 
                 }}
                 className={`
                         absolute right-4 md:hidden 
-                        w-14 h-14 grid place-content-center rounded-full
+                        w-10 h-10 grid place-content-center rounded-full
                         hover:stroke-primary-color-1  stroke-dark-blue bg-light-grayish-blue
                     `}
             >
-                <IconNext width={36} />
+                <IconNext width={14} height={14} />
             </button>
             <button
                 style={{
@@ -60,11 +60,11 @@ const ImageDisplay: FC<{ images: { thumbnail: string, image: string }[] }> = ({ 
                 onClick={() => setActive(previous)}
                 className={`
                         absolute left-4 md:hidden
-                        rounded-full w-14 h-14 grid place-content-center
+                        rounded-full w-10 h-10 grid place-content-center
                         hover:stroke-primary-color-1 stroke-dark-blue bg-light-grayish-blue
                     `}
             >
-                <IconPrevious width={36} />
+                <IconPrevious width={14} height={14} />
             </button>
             <div className='hidden m-4 md:flex flex-row w-[28rem] overflow-x-scroll'>
                 <span className="flex flex-row">
@@ -78,7 +78,7 @@ const ImageDisplay: FC<{ images: { thumbnail: string, image: string }[] }> = ({ 
                 onRequestClose={() => setOpened(false)}
                 shouldCloseOnEsc
                 shouldCloseOnOverlayClick
-                overlayClassName={"hidden md:block md:absolute top-0 left-0 w-screen h-screen"}
+                overlayClassName={"hidden md:block md:fixed top-0 left-0 w-screen h-screen z-20"}
                 style={{
                     overlay: {
                         background: "rgba(0,0,0,75%)"
@@ -89,7 +89,11 @@ const ImageDisplay: FC<{ images: { thumbnail: string, image: string }[] }> = ({ 
                         border: 0,
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
                     }
                 }}
             >
