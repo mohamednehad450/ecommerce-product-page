@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution](https://github.com/mohamednehad450/ecommerce-product-page)
+- [Solution](https://www.frontendmentor.io/solutions/ecommerce-product-page-written-in-nextjs-and-tailwindcss-LjAx-rI_7Y)
 - [Live Site](https://mohamednehad450.github.io/ecommerce-product-page/)
 
 ## My process
